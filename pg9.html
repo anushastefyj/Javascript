@@ -1,0 +1,52 @@
+<html></
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    #output {
+      margin-top: 30px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Click a Button to Know the Importance of Each Day</h2>
+
+  <button onclick="showImportance(1)">Monday</button>
+  <button onclick="showImportance(2)">Tuesday</button>
+  <button onclick="showImportance(3)">Wednesday</button>
+  <button onclick="showImportance(4)">Thursday</button>
+  <button onclick="showImportance(5)">Friday</button>
+  <button onclick="showImportance(6)">Saturday</button>
+  <button onclick="showImportance(7)">Sunday</button>
+
+  <div id="output"></div>
+
+  <script>
+    function showImportance(day) {
+      const messages = {
+        1: "Monday: A fresh start to chase your weekly goals!",
+        2: "Tuesday: Time to build momentum and focus on tasks.",
+        3: "Wednesday: Midweek push – reflect and recalibrate!",
+        4: "Thursday: Almost there – keep the energy going.",
+        5: "Friday: Wrap up strong and plan your weekend.",
+        6: "Saturday: Relax, recharge, or pursue your passions.",
+        7: "Sunday: Reflect, rest, and prepare for a new week."
+      };
+      document.getElementById('output').innerText = messages[day];
+    }
+  </script>
+
+</body>
+</html>
